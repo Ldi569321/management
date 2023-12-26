@@ -1,0 +1,119 @@
+/* 시작 페이지 */
+body {
+  position: relative;
+  width: 1080px;
+  height: 1920px;
+
+  background: #000000;
+}
+
+/* 회원가입 버튼 */
+.registerBtn {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 267px;
+  gap: 10px;
+
+  position: absolute;
+  width: 900px;
+  height: 100px;
+  left: 90px;
+  top: 1680px;
+
+  border: 3px solid #ffffff;
+  border-radius: 10px;
+}
+
+/* 회원가입 */
+.registerBtn div {
+  height: 48px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+
+  color: #ffffff;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* 로그인 버튼 */
+.loginBtn {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+
+  position: absolute;
+  width: 900px;
+  height: 100px;
+  left: 90px;
+  top: 1550px;
+
+  border: 3px solid #ffffff;
+  border-radius: 10px;
+}
+/* 로그인 */
+.loginBtn div {
+  height: 48px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+/* 일정 관리를 보다 편리하게. */
+header {
+  position: absolute;
+  height: 48px;
+  left: 90px;
+  top: 80px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+
+  color: #ffffff;
+}
+/* 회원님의 일정 관리를 위해선 로그인을 해주세요. */
+nav {
+  position: absolute;
+  height: 48px;
+  left: 90px;
+  top: 205px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+
+  color: #ffffff;
+}

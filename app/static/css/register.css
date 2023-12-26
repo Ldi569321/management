@@ -1,0 +1,389 @@
+/* 회원가입 페이지 */
+body {
+  position: relative;
+  width: 1080px;
+  height: 1920px;
+
+  background: #000000;
+}
+
+/* 회원가입 */
+header {
+  position: absolute;
+  height: 48px;
+  left: 90px;
+  top: 114px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+
+  color: #ffffff;
+}
+
+/* 로그인 버튼 */
+.registerBtn {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+
+  position: absolute;
+  width: 900px;
+  height: 100px;
+  left: 87px;
+  top: 1680px;
+
+  background: #e8e8e8;
+  border: 3px solid #ffffff;
+  border-radius: 10px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  transition: background-color 0.5s ease-out;
+}
+/* Frame 1 */
+section {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  gap: 30px;
+
+  position: absolute;
+  width: 900px;
+  height: 828px;
+  left: 87px;
+  top: 275px;
+}
+/* 아이디 인풋 */
+.idInput {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 0px 0px 30px;
+  gap: 10px;
+
+  margin: 0 auto;
+  width: 900px;
+  height: 100px;
+
+  border: 3px solid #cccccc;
+  border-radius: 10px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  background-color: black;
+  color: white;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  color: white;
+}
+
+/* 아이디를 입력해주세요 */
+.idInput::placeholder {
+  width: 450px;
+  height: 48px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #cccccc;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+/* 이메일 인풋 */
+.emailInput {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 0px 0px 30px;
+  gap: 10px;
+
+  margin: 0 auto;
+  width: 900px;
+  height: 100px;
+
+  border: 3px solid #cccccc;
+  border-radius: 10px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+  background-color: black;
+  color: white;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  color: white;
+}
+
+/* 이메일을 입력해주세요 */
+.emailInput::placeholder {
+  width: 440px;
+  height: 48px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #cccccc;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* 실명 인풋 */
+.usernameInput {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 30px;
+  gap: 10px;
+
+  margin: 0 auto;
+  width: 900px;
+  height: 100px;
+
+  border: 3px solid #cccccc;
+  border-radius: 10px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+
+  background-color: black;
+  color: white;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  color: white;
+}
+/* 실명을 입력해 주세요 */
+.usernameInput::placeholder {
+  width: 400px;
+  height: 48px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #cccccc;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+/* 전화번호 인풋 */
+.phoneInput {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 30px;
+  gap: 10px;
+
+  margin: 0 auto;
+  width: 900px;
+  height: 100px;
+
+  border: 3px solid #cccccc;
+  border-radius: 10px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+
+  background-color: black;
+  color: white;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  color: white;
+}
+/* 전화번호를 입력해 주세요 */
+.phoneInput::placeholder {
+  width: 770px;
+  height: 48px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #cccccc;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+/* 비밀번호 인풋 */
+.passwordInput {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 30px;
+  gap: 10px;
+
+  margin: 0 auto;
+  width: 900px;
+  height: 100px;
+
+  border: 3px solid #cccccc;
+  border-radius: 10px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 4;
+  flex-grow: 0;
+
+  background-color: black;
+  color: white;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  color: white;
+}
+/* 비밀번호를 입력해주세요 */
+.passwordInput::placeholder {
+  width: 450px;
+  height: 48px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #cccccc;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+/* 비밀번호 재입력 인풋 */
+.passwordCheckInput {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 30px;
+  gap: 10px;
+
+  margin: 0 auto;
+  width: 900px;
+  height: 100px;
+
+  border: 3px solid #cccccc;
+  border-radius: 10px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 5;
+  flex-grow: 0;
+
+  background-color: black;
+  color: white;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  color: white;
+  transition: background-color 0.5s ease-out;
+}
+/* 비밀번호를 재입력해주세요 */
+.passwordCheckInput::placeholder {
+  width: 490px;
+  height: 48px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #cccccc;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/register.css">
+    <title>일정관리</title>
+
+    <script>
+        function pwCheck(Ivalue) {
+            if (!isNaN(Ivalue)) {
+                alert("비밀번호는 숫자로만 이루어지면 안됩니다.");
+                document.forms.form.password.value = '';
+                document.forms.form.passwordCheck.value = '';
+                document.forms.form.passwordCheck.style = 'background-color: black';
+            } else {
+                if (document.forms.form.password.value.trim() != '' && document.forms.form.passwordCheck.value.trim() != '') {
+                    if (document.forms.form.password.value == document.forms.form.passwordCheck.value) {
+                        document.forms.form.passwordCheck.style = 'background-color: green'
+                        document.forms.form.submit.disabled = false;
+                    } else {
+                        document.forms.form.passwordCheck.style = 'background-color: red'
+                        document.forms.form.submit.disabled = true;
+                    }
+                }
+            }
+        }
+
+        function idCheck(Ivalue) {
+            const Check = /^[a-zA-z0-9]{4,12}$/;
+            if (!Check.test(Ivalue) || !isNaN(Ivalue)) {
+                alert("아이디는 영문 대소문자와 숫자 4~12자리로 입력해야합니다.");
+                document.forms.form.id.value = '';
+                document.forms.form.id.focus();
+            } else {
+                IDduplicateCheck(Ivalue);
+            }
+        }
+        function emailCheck(Ivalue) {
+            const Check = /^[A-Za-z0-9_\.\-]+@[A-Za-z\-]+\.[A-Za-z\-]+/;;
+            if (!Check.test(Ivalue)) {
+                alert("이메일 형식이 유효하지 않습니다.");
+                document.forms.form.email.value = '';
+                document.forms.form.email.focus();
+            }
+        }
+        function usernameCheck(Ivalue) {
+            const Check = /^[가-힣]{2,15}$/;
+            if (!Check.test(Ivalue)) {
+                alert("이름은 한글로 2~15글자 사이로 작성해야 합니다.");
+                document.forms.form.username.value = '';
+                document.forms.form.username.focus();
+            }
+        }
+
+        function phoneCheck(Ivalue) {
+            const Check = /^(01[016789]{1})[0-9]{3,4}[0-9]{4}$/;
+            if (!Check.test(Ivalue)) {
+                alert("전화번호형식이 유효하지 않습니다.");
+                document.forms.form.phone.value = '';
+                document.forms.form.phone.focus();
+            }
+        }
+
+        function idpwCheck(Ivalue) {
+            if (Ivalue != '' && document.forms.form.id.value != '') {
+                if (document.forms.form.password.value == document.forms.form.id.value) {
+                    alert("아이디와 비밀번호가 일치하면 안됩니다.");
+                    document.forms.form.password.value = '';
+                    document.forms.form.passwordCheck.value = '';
+                    document.forms.form.id.value = '';
+                    document.forms.form.passwordCheck.style = 'background-color: black';
+                }
+            }
+        }
+
+        function IDduplicateCheck(Ivalue) {
+            location.href = `/duplicateCheck?id=${Ivalue}`;
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        회원가입
+    </header>
+    <form name="form" action="registerConfirm" method="post">
+        <section>
+            <input type="id" name="id" class="idInput" placeholder="아이디를 입력해주세요"
+                onchange=" idCheck(this.value); idpwCheck(this.value);" maxlength="12" required>
+
+            <input type="email" name="email" class="emailInput" placeholder="이메일을 입력해주세요"
+                onchange="emailCheck(this.value)" required>
+
+            <input type="text" name="username" class="usernameInput" placeholder="실명을 입력해주세요"
+                onchange="usernameCheck(this.value)" required>
+
+            <input type="tel" name="phone" class="phoneInput" placeholder="하이픈을 제외한 전화번호를 입력해주세요"
+                onchange="phoneCheck(this.value)" required>
+
+            <input type="password" name="password" class="passwordInput" placeholder="비밀번호를 입력해주세요"
+                onchange="pwCheck(this.value); idpwCheck(this.value);" maxlength="12" required>
+            <input type="password" name="passwordCheck" class="passwordCheckInput" placeholder="비밀번호를 재입력해주세요"
+                maxlength="12" onchange="pwCheck(this.value); idpwCheck();" required>
+        </section>
+        <input type="submit" value="회원가입 진행" class="registerBtn" name="submit" disabled>
+    </form>
+</body>
+
+</html>
